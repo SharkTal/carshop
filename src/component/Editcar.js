@@ -15,9 +15,11 @@ const Editcar = (props) => {
 
     const handleClickOpen = () => {
         console.log(props.car)
-        setCar({ brand: props.car.brand, model: props.car.model, 
-                color: props.car.color, fuel: props.car.fuel, 
-                year: props.car.year, price: props.car.year})
+        setCar({
+            brand: props.car.brand, model: props.car.model,
+            color: props.car.color, fuel: props.car.fuel,
+            year: props.car.year, price: props.car.year
+        })
         setOpen(true);
     };
 
@@ -29,9 +31,9 @@ const Editcar = (props) => {
     }
 
     const updateCar = () => {
-       props.updateCar(car, props.car._links.car.href)
+        props.updateCar(car, props.car._links.car.href)
         handleClose();
-        
+
     }
     return (
         <div>
